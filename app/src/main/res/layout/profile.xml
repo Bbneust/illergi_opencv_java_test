@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+        <!-- Header aligned to top -->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Topic1"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/prompt_bold"
+                    android:text="Hi,"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/topic_text_size" />
+
+                <TextView
+                    android:id="@+id/firstnameTopic"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/prompt_bold"
+                    android:text="Firstname"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/topic_text_size" />
+
+                <TextView
+                    android:id="@+id/lastnameTopic"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="85dp"
+                    android:fontFamily="@font/prompt_bold"
+                    android:text="Lastname"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/topic_text_size" />
+
+                <TextView
+                    android:id="@+id/EmailTopic"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lastnameTopic"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/prompt_medium"
+                    android:text="Email"
+                    android:textColor="@color/textout"
+                    android:textSize="@dimen/text_hint_size" />
+
+        </RelativeLayout>
+
+        <!-- Footer aligned to bottom -->
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigatorBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:itemBackground="@color/white"
+                    app:itemIconTint="@drawable/selector"
+                    app:itemTextColor="@drawable/selector"
+                    app:menu="@menu/menu_navigation"
+                    tools:layout_editor_absoluteY="0dp" />
+
+        </RelativeLayout>
+
+        <!-- Scrollable Item below header and above footer -->
+        <ScrollView
+            android:id="@+id/scrollableContents"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/footer"
+            android:layout_below="@id/header"
+            android:background="@color/background">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="300dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:id="@+id/EM"
+                                    android:layout_width="280dp"
+                                    android:layout_height="150dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                        <Button
+                                            android:id="@+id/editProfileButton"
+                                            android:layout_width="130dp"
+                                            android:layout_height="130dp"
+                                            android:layout_marginLeft="0dp"
+                                            android:fontFamily="@font/prompt_medium"
+                                            android:gravity="center_vertical"
+                                            android:text="Edit\nProfile"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/green_2"
+                                            android:textSize="@dimen/text_hint_size"
+                                            app:backgroundTint="@color/yellow" />
+
+                                        <Button
+                                            android:id="@+id/manualButton"
+                                            android:layout_width="130dp"
+                                            android:layout_height="130dp"
+                                            android:layout_marginLeft="20dp"
+                                            android:fontFamily="@font/prompt_medium"
+                                            android:gravity="center_vertical"
+                                            android:text="Manual"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_hint_size"
+                                            app:backgroundTint="@color/brown" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/CS"
+                                    android:layout_width="280dp"
+                                    android:layout_height="150dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                        <Button
+                                            android:id="@+id/checkoutButton"
+                                            android:layout_width="130dp"
+                                            android:layout_height="130dp"
+                                            android:layout_marginLeft="0dp"
+                                            android:fontFamily="@font/prompt_medium"
+                                            android:gravity="center_vertical"
+                                            android:text="Checkout\nAllergies\nFood"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_hint_size"
+                                            app:backgroundTint="@color/brown" />
+
+                                        <Button
+                                            android:id="@+id/signOutButton"
+                                            android:layout_width="130dp"
+                                            android:layout_height="130dp"
+                                            android:layout_marginLeft="20dp"
+                                            android:fontFamily="@font/prompt_medium"
+                                            android:gravity="center_vertical"
+                                            android:text="SIGN OUT"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/green_2"
+                                            android:textSize="@dimen/text_hint_size"
+                                            app:backgroundTint="@color/yellow" />
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+</RelativeLayout>
+
+
+
+
+
+
+

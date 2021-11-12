@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.illergi_opencv_java_test">
+    <!-- Camera and Storage permission will be required -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/illergi"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        tools:ignore="LockedOrientationActivity"
+        android:theme="@style/Theme.Illergi"
+        tools:replace="android:label">
+        <activity
+            android:name="com.example.illergi_opencv_java_test.ChangePasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.PersonalInfoActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.EditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.FoodListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.CategoryListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.Manual1Activity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.Manual2Activity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.Manual3Activity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.EditProfileActivity_old"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.MenuNavigationActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.ShowResultActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.CropImageActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.HistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.Profile"
+            android:exported="true" />
+        <activity
+            android:name="com.example.illergi_opencv_java_test.Camera"
+            android:exported="true" />
+        <activity android:name="com.example.illergi_opencv_java_test.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.illergi_opencv_java_test.RegisterActivity" />
+        <activity android:name="com.example.illergi_opencv_java_test.MainActivity" >
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity android:name="com.example.illergi_opencv_java_test.ForgetPasswordActivity" />
+        <activity android:name="com.example.illergi_opencv_java_test.CameraActivity" />
+    </application>
+
+</manifest>

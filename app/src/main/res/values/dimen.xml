@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sign_in_button_size">20dp</dimen>
+    <dimen name="text_hint_size">16dp</dimen>
+    <dimen name="small_note_text">12dp</dimen>
+    <dimen name="info">14dp</dimen>
+    <dimen name="topic_text_size">30dp</dimen>
+    <dimen name="change_text_size">30dp</dimen>
+    <dimen name="end_text_size">24dp</dimen>
+    <dimen name="white_round_text_width">330dp</dimen>
+    <dimen name="sign_up_info">12dp</dimen>
+    <dimen name="create_account_text_size">35dp</dimen>
+
+    <dimen name="illergi_size">50dp</dimen>
+    <dimen name="create_ac_white_round_text_high">40dp</dimen>
+    <dimen name="log_in_white_round_text_high">50dp</dimen>
+
+    <dimen name="button_size">20dp</dimen>
+    <dimen name="manual_size">24dp</dimen>
+    <dimen name="title_size">24dp</dimen>
+    <dimen name="bottom_bar_height">56dp</dimen>
+
+
+
+</resources>

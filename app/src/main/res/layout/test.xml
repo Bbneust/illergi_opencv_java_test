@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable Item below header and above footer -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ValidateText"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/prompt_light"
+                android:text=""
+                android:textColor="@color/red"
+                android:textSize="@dimen/sign_up_info"
+                app:layout_constraintBottom_toTopOf="@+id/hintEmail"
+                app:layout_constraintEnd_toEndOf="@+id/TextEmailAddress"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/TextEmailAddress"
+                app:layout_constraintTop_toBottomOf="@+id/textLogo"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/TextEmailAddress"
+                android:layout_width="@dimen/white_round_text_width"
+                android:layout_height="@dimen/log_in_white_round_text_high"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/prompt_light"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="60dp"
+                android:textColor="@color/green_2"
+                android:textColorHint="@color/textin"
+                android:textSize="@dimen/text_hint_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ValidateText" />
+
+            <ImageView
+                android:id="@+id/iconEmail"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_baseline_email_24"
+                app:layout_constraintBottom_toBottomOf="@+id/TextEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/TextEmailAddress"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="@+id/TextEmailAddress"
+                app:layout_constraintTop_toTopOf="@+id/TextEmailAddress"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <EditText
+                android:id="@+id/TextPassword"
+
+                android:layout_width="@dimen/white_round_text_width"
+                android:layout_height="@dimen/log_in_white_round_text_high"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/prompt_light"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingLeft="60dp"
+                android:textColor="@color/green_2"
+                android:textColorHint="@color/textin"
+                android:textSize="@dimen/text_hint_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TextEmailAddress" />
+
+            <ImageView
+                android:id="@+id/iconPass"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintBottom_toBottomOf="@+id/TextPassword"
+                app:layout_constraintEnd_toEndOf="@+id/TextPassword"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="@+id/TextPassword"
+                app:layout_constraintTop_toTopOf="@+id/TextPassword"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/forgotPassButton"
+                android:layout_width="115dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/prompt_light"
+                android:gravity="center_horizontal"
+                android:text="@string/forgot_pass"
+                android:textColor="@color/green_1"
+                android:textSize="@dimen/small_note_text"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="@+id/TextPassword"
+                app:layout_constraintTop_toBottomOf="@+id/TextPassword" />
+
+            <Button
+                android:id="@+id/signInButton"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@drawable/all_change_button_color"
+                android:fontFamily="@font/prompt_regular"
+                android:gravity="center"
+                android:text="SIGN IN"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sign_in_button_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/forgotPassButton" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textLogo"
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:fontFamily="@font/robotocondensed_bold"
+                android:gravity="center"
+                android:text="@string/illergi"
+                android:textColor="@color/green_2"
+                android:textSize="@dimen/illergi_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+            <View
+                android:id="@+id/line_1"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/line"
+                app:layout_constraintBottom_toBottomOf="@+id/TextEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/TextEmailAddress"
+                app:layout_constraintHorizontal_bias="0.148"
+                app:layout_constraintStart_toStartOf="@+id/TextEmailAddress"
+                app:layout_constraintTop_toTopOf="@+id/TextEmailAddress" />
+
+            <View
+                android:id="@+id/line_2"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/line"
+                app:layout_constraintBottom_toBottomOf="@+id/TextPassword"
+                app:layout_constraintEnd_toEndOf="@+id/TextPassword"
+                app:layout_constraintHorizontal_bias="0.148"
+                app:layout_constraintStart_toStartOf="@+id/TextPassword"
+                app:layout_constraintTop_toTopOf="@+id/TextPassword" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signInButton"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <TextView
+                    android:id="@+id/DontHaveAccountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="false"
+                    android:fontFamily="@font/prompt_light"
+                    android:gravity="center"
+                    android:text="@string/don_t_have_"
+                    android:textColor="@color/green_1"
+                    android:textSize="@dimen/small_note_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="671dp" />
+
+                <TextView
+                    android:id="@+id/signUpButton"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+
+                    android:fontFamily="@font/prompt_bold"
+                    android:gravity="center"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/small_note_text"
+                    app:layout_constraintStart_toEndOf="@+id/DontHaveAccountText"
+                    tools:layout_editor_absoluteY="671dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FoodListActivity">
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/background">
+
+        <View
+            android:id="@+id/rectop"
+            android:layout_width="2000dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rec_top"/>
+
+        <ImageButton
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            app:srcCompat="@drawable/icon_arrow"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/EditAllergicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/prompt_semibold"
+            android:gravity="center_horizontal"
+            android:text="Allergic Food"
+            android:textColor="@color/green_1"
+            android:textSize="@dimen/topic_text_size" />
+
+    </RelativeLayout>
+
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigatorBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/white"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/menu_navigation"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </RelativeLayout>
+
+    <!-- Scrollable Item below header and above footer -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:background="@color/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/hintSearch"
+                android:layout_width="@dimen/white_round_text_width"
+                android:layout_height="@dimen/create_account_text_size"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/prompt_light"
+                android:gravity="center_vertical"
+                android:inputType="textPersonName"
+                android:textColor="@color/green_2"
+                android:textColorHint="@color/textin"
+                android:textSize="@dimen/text_hint_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--    <ImageView-->
+            <!--        android:id="@+id/SearchimageView"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginStart="10dp"-->
+            <!--        android:layout_marginLeft="10dp"-->
+            <!--        app:layout_constraintBottom_toBottomOf="@+id/hintSearch"-->
+            <!--        app:layout_constraintEnd_toStartOf="@+id/EditAllergicText"-->
+            <!--        app:layout_constraintStart_toStartOf="@+id/hintSearch"-->
+            <!--        app:layout_constraintTop_toTopOf="@+id/hintSearch"-->
+            <!--        app:srcCompat="@drawable/icon_search"-->
+            <!--        tools:ignore="VectorDrawableCompat" />-->
+
+            <!--    <ImageButton-->
+            <!--        android:id="@+id/clearButton"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginRight="10dp"-->
+            <!--        android:backgroundTint="@android:color/transparent"-->
+            <!--        app:layout_constraintBottom_toBottomOf="@+id/hintSearch"-->
+            <!--        app:layout_constraintEnd_toEndOf="@+id/hintSearch"-->
+            <!--        app:layout_constraintTop_toTopOf="@+id/hintSearch"-->
+            <!--        app:srcCompat="@drawable/icon_clear"-->
+            <!--        tools:ignore="VectorDrawableCompat" />-->
+
+            <TextView
+                android:id="@+id/categoryHeadText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/prompt_medium"
+                android:text=""
+                android:textColor="@color/green_2"
+                android:textSize="@dimen/button_size"
+                app:layout_constraintBottom_toTopOf="@+id/divider2"
+                app:layout_constraintStart_toStartOf="@+id/hintSearch" />
+
+            <TextView
+                android:id="@+id/SelectAllButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/prompt_light"
+                android:gravity="center_horizontal"
+                android:text="Select All"
+                android:textColor="@color/red"
+                android:textSize="@dimen/info"
+                app:layout_constraintBottom_toBottomOf="@+id/categoryHeadText"
+                app:layout_constraintEnd_toEndOf="@+id/hintSearch"
+                app:layout_constraintTop_toTopOf="@+id/categoryHeadText" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="330dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/yellow"
+                app:layout_constraintEnd_toEndOf="@+id/hintSearch"
+                app:layout_constraintStart_toStartOf="@+id/hintSearch"
+                app:layout_constraintTop_toBottomOf="@+id/hintSearch" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/foodRecycleView"
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/saveButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/prompt_regular"
+                android:gravity="center_horizontal"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sign_in_button_size"
+                app:backgroundTint="@drawable/all_change_button_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

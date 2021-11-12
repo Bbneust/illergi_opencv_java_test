@@ -1,0 +1,3 @@
+rootProject.name = "illergi_opencv_java_test"
+include ':app'
+include ':openCVLibrary3414'

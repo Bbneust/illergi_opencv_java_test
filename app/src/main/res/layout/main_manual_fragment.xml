@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".MainManualFragment">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/background"
+            app:srcCompat="@drawable/icon_arrow"
+            tools:ignore="VectorDrawableCompat" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/manualViewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <View
+            android:id="@+id/rec1"
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rec_manual_long" />
+
+        <View
+            android:id="@+id/rec2"
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rec_manual_short" />
+
+        <View
+            android:id="@+id/rec3"
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rec_manual_short" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/prompt_medium"
+        android:gravity="center_horizontal"
+        android:text="NEXT"
+        android:textSize="@dimen/manual_size"
+        app:backgroundTint="@color/yellow"
+
+        app:layout_constraintBottom_toBottomOf="@+id/header" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

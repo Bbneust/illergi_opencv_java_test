@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="illergi">iLLergi</string>
+    <string name="password">Password</string>
+    <string name="forgot_pass">Forgot password?</string>
+    <string name="don_t_have_">Do not have an account ? </string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="create_an_a">Create\nAn account</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="email">Email</string>
+    <string name="confirm_pass">Confirm new password</string>
+    <string name="already_hav">Already have an account ?</string>
+    <string name="sign_in">Sign In</string>
+
+    <string name="reset_pass">Reset\nPassword</string>
+    <string name="enter_the_e">Enter the email associated with your account\nand we will send an email with instructions to\nreset your password.</string>
+    <string name="we_have_sent">We have sent a verification code to your\nregistered email ID.</string>
+    <string name="please_enter">Please enter your verification code.</string>
+    <string name="create_new_">Create New\nPassword</string>
+    <string name="your_new_pa">Your new password must be different from \nprevious used passwords.</string>
+
+    <string-array name="allergic_food">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

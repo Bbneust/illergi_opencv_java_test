@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Manual1Activity">
+
+    <!-- Header aligned to top -->
+
+
+    <!-- Footer aligned to bottom -->
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/footer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:gravity="center">-->
+
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottomNavigatorBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:itemBackground="@color/white"-->
+<!--            app:itemIconTint="@drawable/selector"-->
+<!--            app:itemTextColor="@drawable/selector"-->
+<!--            app:menu="@menu/menu_navigation"-->
+<!--            tools:layout_editor_absoluteY="0dp" />-->
+
+<!--    </RelativeLayout>-->
+
+    <!-- Scrollable Item below header and above footer -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:background="@color/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="350dp"
+                android:layout_height="240dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:id="@+id/Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                <TextView
+                    android:id="@+id/TopicText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prompt_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Take a photo or \nChoose an image"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/manual_size" />
+
+                <TextView
+                    android:id="@+id/ContentText"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/prompt_light"
+                    android:text="take a photo with your mobile camera or choose an image from the photo gallery in order to be proceeded to list your allergic ingredients on the food-packaging-label image."
+                    android:textColor="@color/green_1"
+                    android:textSize="@dimen/text_hint_size" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/line"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="10dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/Content">-->
+
+<!--                <View-->
+<!--                    android:id="@+id/RecLong"-->
+<!--                    android:layout_width="44dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:background="@drawable/rec_manual_long" />-->
+
+<!--                <View-->
+<!--                    android:id="@+id/RecShort1"-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="10dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:background="@drawable/rec_manual_short" />-->
+
+<!--                <View-->
+<!--                    android:id="@+id/RecShort2"-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="10dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:background="@drawable/rec_manual_short" />-->
+
+<!--            </LinearLayout>-->
+
+            <!--            <Button-->
+            <!--                android:id="@+id/Next"-->
+            <!--                android:layout_width="2000dp"-->
+            <!--                android:layout_height="60dp"-->
+            <!--                android:layout_marginTop="40dp"-->
+            <!--                android:fontFamily="@font/prompt_medium"-->
+            <!--                android:gravity="center_horizontal"-->
+            <!--                android:text="NEXT"-->
+            <!--                android:textSize="@dimen/manual_size"-->
+            <!--                app:backgroundTint="@color/yellow"-->
+            <!--                app:layout_constraintTop_toTopOf="@id/line"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

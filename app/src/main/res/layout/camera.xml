@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".CameraActivity">
+
+    <!-- Footer aligned to bottom -->
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/footer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:gravity="center">-->
+
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottomNavigatorBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:itemBackground="@color/white"-->
+<!--            app:itemIconTint="@drawable/selector"-->
+<!--            app:itemTextColor="@drawable/selector"-->
+<!--            app:menu="@menu/menu_navigation"-->
+<!--            tools:layout_editor_absoluteY="0dp" />-->
+
+<!--    </RelativeLayout>-->
+
+<!--    &lt;!&ndash; Scrollable Item below header and above footer &ndash;&gt;-->
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollableContents"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="fill_parent"-->
+<!--        android:layout_above="@id/footer"-->
+<!--        android:background="@color/background">-->
+
+<!--    </ScrollView>-->
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <TextureView-->
+<!--            android:id="@+id/cameraFrame"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="170dp"-->
+<!--            android:scaleType="center"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:srcCompat="@color/black" />-->
+
+<!--        &lt;!&ndash;    <ImageView&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:id="@+id/imageFrame"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_height="630dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:maxHeight="600dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:scaleType="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;        tools:srcCompat="@color/black" >&ndash;&gt;-->
+<!--        &lt;!&ndash;    </ImageView>&ndash;&gt;-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/buttonLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_margin="15dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cameraFrame">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/iconPhoto"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/background"-->
+<!--                android:gravity="center"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/cameraButton"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:srcCompat="@drawable/icon_photo"-->
+<!--                tools:ignore="VectorDrawableCompat" />-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/cameraButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/CamBig"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:background="@drawable/cam"-->
+<!--                    android:gravity="center"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_bias="1.0" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/CamSmall"-->
+<!--                    android:layout_width="57.14dp"-->
+<!--                    android:layout_height="57.14dp"-->
+<!--                    android:background="@drawable/cam"-->
+<!--                    android:gravity="center"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/CamBig"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/CamBig"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/CamBig"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</RelativeLayout>
